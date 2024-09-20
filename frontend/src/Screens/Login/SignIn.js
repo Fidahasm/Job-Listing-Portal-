@@ -1,5 +1,7 @@
 import React from 'react'
 import './SignIn.css'
+import { Link } from 'react-router-dom';
+
 
 function SignIn() {
   return (
@@ -11,7 +13,7 @@ function SignIn() {
             <input type="password" name="password" placeholder="Password" required/><br />
             <button type="submit" className='signin-btn'>Sign In</button>
             <p>or</p>
-            <p id="b">Don't have an Account?<a href="/login">Sign Up</a></p>
+            <p id="b">Don't have an Account?<Link to="/login">Sign Up</Link></p>
         
         </div>
 
