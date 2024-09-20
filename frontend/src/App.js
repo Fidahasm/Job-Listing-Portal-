@@ -4,6 +4,7 @@ import HomePage from "./Screens/HomePage/HomePage";
 import Login from "./Screens/Login/Login";
 import Registration from "./Screens/Login/Registration"
 import Admin from "./Screens/Admin/Admin";
+import SignIn from "./Screens/Login/SignIn";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element = {<Login/>}/>
         <Route path="/register" element = {<Registration/>}/>
         <Route path="/admin" element = {<Admin/>}/>
+        <Route path="/signin" element={<SignIn />}/>
       </Routes>
     </Router>
  
