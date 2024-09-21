@@ -1,4 +1,34 @@
 .container-main{
-    background-color: #f3f2f0;
+    background-color: white;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Indeed Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", Roboto, Noto, sans-serif;
+
+}
+.head-user{
+    width:50%;
+    height: 20%;
+    background-color: #f3f2f0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3%;
+    border-radius: 10px;
+}
+.head-user h1{
+margin-left: 32px   ;
+}
+.form-main{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+}
+.form-main input{
+width: 90%;
+height: 30px;
+margin-bottom: 10px;
 }
