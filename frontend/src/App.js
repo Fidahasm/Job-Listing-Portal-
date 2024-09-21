@@ -6,6 +6,7 @@ import Registration from "./Screens/Login/Registration"
 import Admin from "./Screens/Admin/Admin";
 import SignIn from "./Screens/Login/SignIn";
 import 'boxicons/css/boxicons.min.css';
+import UserProfile from "./UserProfile/UserProfile";
 
 function App() {
   return (
@@ -16,6 +17,8 @@ function App() {
         <Route path="/register" element = {<Registration/>}/>
         <Route path="/admin" element = {<Admin/>}/>
         <Route path="/signin" element={<SignIn />}/>
+        <Route path="/userprofile" element={<UserProfile />}/>
+
       </Routes>
     </Router>
  
