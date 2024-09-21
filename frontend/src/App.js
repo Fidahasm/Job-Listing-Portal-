@@ -5,6 +5,7 @@ import Login from "./Screens/Login/Login";
 import Registration from "./Screens/Login/Registration"
 import Admin from "./Screens/Admin/Admin";
 import SignIn from "./Screens/Login/SignIn";
+import 'boxicons/css/boxicons.min.css';
 
 function App() {
   return (
