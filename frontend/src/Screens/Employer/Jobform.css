@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 3rem;
     padding-left: 0;
     padding-right: 0;
@@ -17,7 +17,7 @@
     /* background-color: aliceblue; */
     display: flex;
     flex-direction: column;
-    margin-top: 80px;
+    /* margin-top: 180px; */
     align-items: center;
     padding-bottom: 30px;
     /* background-color: white; */
@@ -82,6 +82,30 @@
     font-size: 16px;
     padding-left: 5px;
     /* border: none; */
+}
+.job-area{
+    /* flex-direction: column; */
+    width: 100%;
+    /* height: 50px; */
+    display: flex;
+    justify-content: space-between;
+}
+.sub{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+.sub input{
+    border-radius: 3px;
+    border: 0.1px solid ;
+    height: 44px;
+    font-size: 16px;
+    padding-left: 5px;
+}
+.sub label{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 600;
 }
 .job-continue{
     height: 45px;
