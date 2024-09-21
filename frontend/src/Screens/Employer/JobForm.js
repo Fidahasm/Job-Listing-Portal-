@@ -46,7 +46,7 @@ function JobForm() {
 
             <div className='job-content'>
               <label htmlFor="">Which option best describes this job's location?</label>
-              <select name="type of job" id="" required>
+              <select name="On-site or Remote" id="" required>
                 <option value="select an oprion" >Select an option</option>
                 <option value="On-site">On-site</option>
                 <option value="Remote">Remote</option>
@@ -56,10 +56,60 @@ function JobForm() {
               <label htmlFor="">City</label>
               <input type="text" required/>
             </div>
+            <div className='job-area'>
+              <div className='sub'>
+              <label htmlFor="">Area </label>
+              <input type="text" required/>
+              </div>
+             <div className='sub'>
+             <label htmlFor="">Pincode </label>
+             <input type="text" required/>
+             </div>
+             
+            </div>
             <div className='job-content'>
-              <label htmlFor="">Your phone number </label>
+              <label htmlFor="">Street address</label>
               <input type="text" required/>
             </div>
+            <div className='job-content'>
+              <label htmlFor="">Job type</label>
+              <select name="type of job" id="" required>
+                <option value="select an oprion" >Select an option</option>
+                <option value="Full-time">Full-time</option>
+                <option value="Freelance">Freelance</option>
+                <option value="Fresher">Fresher</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Internship">Internship</option>
+                <option value="Permanent">Permanent</option>
+              </select>
+            </div>
+            <div className='job-content'>
+              <label htmlFor="">Number of poeple you wish to hire for this job</label>
+              <input type='number'  required/>
+            </div>
+            <div className='job-content'>
+              <label htmlFor="">Salary </label>
+              <div className='job-area'>
+              <div className='sub'>
+              <label htmlFor="">Minimum </label>
+              <input type="number" required/>
+              </div>
+             <div className='sub'>
+             <label htmlFor="">Maximum </label>
+             <input type="number" required/>
+             <label htmlFor="">Rate</label>
+             <select name="salary" id="">
+              <option value="per month">Per month</option>
+              <option value="per annum">Per annum</option>
+
+             </select>
+             </div>
+             
+            </div>
+              
+            </div>
+
+
             <div className="button">
             <div className="job-continue">
               Continue
