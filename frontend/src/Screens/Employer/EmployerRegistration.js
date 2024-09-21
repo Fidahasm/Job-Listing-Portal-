@@ -19,7 +19,6 @@ function EmployerRegistration() {
 
           </div>
         </div>
-        <form action="">
           <div className="form">
             <h1>You haven't posted a job before, so you'll need to create an employer account.</h1>
 
@@ -53,13 +52,12 @@ function EmployerRegistration() {
             <div className="button">
             <div className="continue">
               Continue
-              <i class='bx bx-right-arrow-alt' style={{fontSize:"20px"}}></i>
+              <i className='bx bx-right-arrow-alt' style={{fontSize:"20px"}}></i>
             </div>
             </div>
             
 
           </div>
-        </form>
 
       </div>
 
