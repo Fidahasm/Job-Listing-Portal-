@@ -73,7 +73,7 @@ function UserProfile() {
 
           {/* Rendering multiple education forms */}
           {educationForms.map((form, index) => (
-            <div key={index} className="content">
+            <div key={index} className="content" >
               <div className='edc'>
                 <label htmlFor="">School/College</label>
                 <input type="text" required />
@@ -88,7 +88,7 @@ function UserProfile() {
               </div>
 
               {educationForms.length > 1 && (
-                <div className="delete-btn" onClick={() => deleteEducationForm(index)}>
+                <div className="delete-btn" onClick={() => deleteEducationForm(index)} >
                   Delete
                 </div>
               )}

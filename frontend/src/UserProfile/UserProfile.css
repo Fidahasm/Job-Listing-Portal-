@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    /* height: 100vh; */
     padding: 3rem;
     padding-left: 0;
     padding-right: 0;
@@ -13,18 +13,18 @@
 }
 .subdiv-user{
     width: 60%;
-    /* height: auto; */
+    height: auto;
     /* background-color: aliceblue; */
     display: flex;
     flex-direction: column;
-    margin-top: 40%;
+    /* margin-top: 130px; */
     align-items: center;
     padding-bottom: 30px;
     /* background-color: white; */
 }
 .head-user{
     width: 90%;
-    height: 25%;
+    height: 180px;
     background-color: #f3f2f0;
     border-radius: 10px;
     display: flex;
@@ -99,7 +99,7 @@
 
 .add-btn{
     background-color: rgb(37, 87, 167);
-    width: 10%;
+    width: 70px;
     height:30px;
     display: flex;
     justify-content: center;
@@ -116,7 +116,7 @@
 }
 
 @media only screen and (max-width: 750px){
-    .subdiv{
+    .subdiv-user{
         width: 100%;
         margin-top: 80px;
     }
@@ -129,13 +129,13 @@
         width: 100%;
         justify-content: center;
     }
-    .subdiv{
+    .subdiv-user{
         margin-top: 0;
     }
 }
 .delete-btn {
     background-color: rgb(69, 66, 66);
-    width: 10%;
+    width: 70px;
     height: 30px;
     display: flex;
     justify-content: center;
