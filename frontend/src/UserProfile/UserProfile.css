@@ -1,4 +1,4 @@
-.maindiv{
+.maindiv-user{
     width: 100%;
     background-color: #ffffff;
     display: flex;
@@ -11,25 +11,25 @@
     font-family: "Indeed Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", Roboto, Noto, sans-serif;
 
 }
-.subdiv{
+.subdiv-user{
     width: 60%;
-    height: auto;
+    /* height: auto; */
     /* background-color: aliceblue; */
     display: flex;
     flex-direction: column;
-    margin-top: 130px;
+    margin-top: 40%;
     align-items: center;
     padding-bottom: 30px;
     /* background-color: white; */
 }
-.head{
+.head-user{
     width: 90%;
     height: 25%;
     background-color: #f3f2f0;
     border-radius: 10px;
     display: flex;
 }
-.head-left{
+.head-left-user{
     width: 50%;
     /* background-color: aqua; */
     height: 100%;
@@ -39,15 +39,10 @@
     font-size: 15px;
     font-weight: 700;
 }
-.left{
+.left-user{
     margin: 32px;
 }
-.head-right{
-    width: 50%;
-    /* background-color: aquamarine; */
-    height: 100%;
 
-}
 
 .form{
     display: flex;
@@ -93,11 +88,13 @@
     border-radius: 5px;
     font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
 }
 
 
 .form h3{
     justify-items: left;
+    margin-top:0px;
 }
 
 .add-btn{
@@ -137,7 +134,7 @@
     }
 }
 .delete-btn {
-    background-color: rgb(220, 53, 69);
+    background-color: rgb(69, 66, 66);
     width: 10%;
     height: 30px;
     display: flex;
@@ -155,3 +152,24 @@
     flex-direction: column;
     padding-bottom: 30px;
 }
+.remove-skill {
+    margin-left: 10px;
+    color: #323030;
+    cursor: pointer;
+  }
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .skill-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: normal;
+  }
