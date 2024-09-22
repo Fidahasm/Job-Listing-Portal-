@@ -1,8 +1,43 @@
-/* Main container for the job listings */
+/* .main{ */
+    /* padding-top: 20px; */
+/* } */
+
 .job-listing-container {
     text-align: center;
     padding: 20px;
     font-family: Arial, sans-serif;
+    display: flex;
+    padding-top: 40px;
+  }
+  .header{
+    height: 80px;
+    width: 100%;
+    background-color: aquamarine;
+  }
+
+  .left-div{
+    height: 100%;
+    width: 17%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+  }
+.profile{
+    width: 100%;
+    height: 280px;
+    background-color: aquamarine;
+    border-radius: 10px;
+  }
+  .filter{
+    width: 100%;
+    height: 1000px;
+    background-color:  bisque;
+    border-radius: 10px;
+    margin-top: 25px;
+  }
+  .center-div{
+    width: 80%;
+
   }
   
   /* Title for the page */
@@ -15,22 +50,33 @@
   .jobs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /* justify-content: space-between; */
     gap: 20px;
+    width: 100%;
+    margin-left: 30px;
   }
   
   /* Individual job box styling */
   .job-box {
-    width: 250px;
+    width: 25%;
     padding: 15px;
+    height: 220px;
     background-color: #f1f1f1;
     border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* border: 1px solid #111; */
+    box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: translateY(100px); /* Initial position before animation */
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    /* transition: transform 0.4s ease-out, opacity 0.4s ease-out; */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
   
+.job-box:hover{
+    transform: scale(1.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
   /* Animation for the job boxes */
   @keyframes slideUp {
     from {

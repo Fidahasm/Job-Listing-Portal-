@@ -39,8 +39,23 @@ function HomePage() {
   }, []);
 
   return (
+    <div className="main">
+      <div className="header">
+        
+      </div>
     <div className="job-listing-container">
-      <h1 className="title">Job Listings</h1>
+
+      <div className="left-div">
+        <div className="profile">
+
+        </div>
+        <div className="filter">
+
+        </div>
+
+      </div>
+      {/* <h1 className="title">Job Listings</h1> */}
+      <div className="center-div">
       <div className="jobs">
         {jobs.map((job, index) => (
           <div key={job.id} className="job-box animate-job" style={{ animationDelay: `${index * 0.2}s` }}>
@@ -50,7 +65,14 @@ function HomePage() {
           </div>
         ))}
       </div>
+      </div>
+      <div className="right-div">
+
+      </div>
+     
     </div>
+    </div>
+
   )
 }
 

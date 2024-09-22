@@ -36,17 +36,26 @@ function JobForm() {
             </select>
           </div>
 
+          
           <div className='job-content'>
             <label htmlFor="">Company description</label>
             <textarea placeholder='Introduce your company to people in few lines' required />
           </div>
-          <br />
+          {/* <br /> */}
+          <hr style={{ width: '100%' , height:'0.5px', marginTop:'29px'}} />
 
-          <hr style={{ width: '100%' , height:'0.5px'}} />
-          <div className="h1">
-          <h1>Job posting location.</h1>
-
+          <div className='job-content'>
+            <label htmlFor="">Job title</label>
+            <input type='text' required />
           </div>
+          <div className='job-content'>
+            <label htmlFor="">Job description</label>
+            <textarea placeholder='Describe the job details and skills required in few lines' required />
+          </div>
+          {/* <br /> */}
+
+          {/* <hr style={{ width: '100%' , height:'0.5px'}} /> */}
+        
 
           <div className='job-content'>
             <label htmlFor="">Which option best describes this job's location?</label>
