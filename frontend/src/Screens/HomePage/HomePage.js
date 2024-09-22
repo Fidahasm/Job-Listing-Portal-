@@ -38,10 +38,43 @@ function HomePage() {
     setTimeout(() => setJobs(fetchedJobs), 1000); // Add a delay to simulate API loading
   }, []);
 
+
+  const [selectedExperienceOptions, setSelectedExperienceOptions] = useState({
+    internship: false,
+    fresher: false,
+    freelance: false,
+    fullTime: false,
+  });
+  const [selectedSalaryOptions, setSelectedSalaryOptions] = useState({
+    '1000-10000': false,
+    '10001-25000': false,
+    '25001-50000': false,
+    '50001-75000': false,
+    '75000+': false,
+  });
+  
+  const [selectedJobTypeOptions, setSelectedJobTypeOptions] = useState({
+    internship: false,
+    fresher: false,
+    freelance: false,
+    fullTime: false,
+  });
+
+
+
+  // Handle checkbox change
+  const handleExperienceCheckboxChange = (option) => {
+    setSelectedOptions((prev) => ({
+      ...prev,
+      [option]: !prev[option],
+    }));
+  };
+
+
   return (
     <div className="main">
       <div className="header">
-        
+
       </div>
     <div className="job-listing-container">
 
@@ -49,9 +82,110 @@ function HomePage() {
         <div className="profile">
 
         </div>
-        <div className="filter">
+        <div className="filter-checkboxes">
 
-        </div>
+      <h4>Experience Level</h4>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedExperienceOptions.internship}
+          onChange={() => handleExperienceCheckboxChange('internship')}
+        />
+        Internship
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedExperienceOptions.fresher}
+          onChange={() => handleExperienceCheckboxChange('fresher')}
+        />
+        Fresher
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedExperienceOptions.freelance}
+          onChange={() => handleExperienceCheckboxChange('freelance')}
+        />
+        Freelance
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedExperienceOptions.fullTime}
+          onChange={() => handleExperienceCheckboxChange('fullTime')}
+        />
+        Full-time
+      </label>
+
+
+      <h4>Salary</h4>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedSalaryOptions.fullTime}
+          onChange={() => handleCheckboxChange('1000  - 10,000')}
+        />
+        1000  - 10,000
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedSalaryOptions.fullTime}
+          onChange={() => handleCheckboxChange('fullTime')}
+        />
+                10,001  - 25,000
+
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedSalaryOptions.fullTime}
+          onChange={() => handleCheckboxChange('fullTime')}
+        />
+                25,001  - 50,000
+
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedSalaryOptions.fullTime}
+          onChange={() => handleCheckboxChange('fullTime')}
+        />
+                50,001  - 75,000
+
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedSalaryOptions.fullTime}
+          onChange={() => handleCheckboxChange('fullTime')}
+        />
+                75,000+
+
+      </label>
+
+      <h4>Job type</h4>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedJobTypeOptions.fullTime}
+          onChange={() => handleCheckboxChange('fullTime')}
+        />
+        On-site
+      </label>
+      <label>
+        <input
+          type="checkbox"
+          checked={selectedJobTypeOptions.fullTime}
+          onChange={() => handleCheckboxChange('fullTime')}
+        />
+        Remote
+      </label>
+      
+
+    </div>
+
 
       </div>
       {/* <h1 className="title">Job Listings</h1> */}
