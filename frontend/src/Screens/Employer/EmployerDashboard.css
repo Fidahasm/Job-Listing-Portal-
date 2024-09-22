@@ -1,0 +1,50 @@
+.div-main{
+    background-color: white;
+    font-family: "Indeed Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", Roboto, Noto, sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+.navbar{
+    height: 40px;
+   width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: 20px;
+    font-size: 18px;
+    /* background-color: yellow; */
+}
+.nav-content{
+    width: 110px;
+    /* background-color: brown; */
+    display: flex;
+    justify-content: center;
+     align-items: center;
+     cursor: pointer;
+}
+.nav-content.active, 
+.nav-content:hover {
+    background-color: white;
+    border-radius: 5px;
+    transform: scale(1.05); 
+    transition: transform 0.3s ease;
+}
+
+.nav-main{
+    width: 100%;
+    height: 60px;
+    background-color: #f3f2f0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#post-job{
+    background-color: #0a66c2;
+    border-radius: 5px;
+    color: white;
+}
+#post-job:hover{
+    border: none;
+    background-color: #1e7fe0;
+
+
+}
