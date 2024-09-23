@@ -8,7 +8,6 @@ function EmployerDashboard() {
     <div className="navbar">
       <div className="nav-content active">Jobs</div>
       <div className="nav-content">Candidates</div>
-      {/* <div className="nav-content" id='post-job'>Post Job</div> */}
       <div className="nav-content"><i class='bx bx-user-circle'></i>Username</div>
     </div>
     </div>
@@ -53,9 +52,49 @@ function EmployerDashboard() {
       <td>September 1, 2024</td>
       <td>Open</td>
     </tr>
+    <tr>
+  <td>Frontend Developer</td>
+  <td>22</td>
+  <td>September 10, 2024</td>
+  <td>Open</td>
+</tr>
+<tr>
+  <td>Backend Developer</td>
+  <td>15</td>
+  <td>August 25, 2024</td>
+  <td>Closed</td>
+</tr>
+<tr>
+  <td>Machine Learning Engineer</td>
+  <td>8</td>
+  <td>September 12, 2024</td>
+  <td>Open</td>
+</tr>
+<tr>
+  <td>System Administrator</td>
+  <td>5</td>
+  <td>September 3, 2024</td>
+  <td>Interviewing</td>
+</tr>
+<tr>
+  <td>QA Engineer</td>
+  <td>20</td>
+  <td>September 7, 2024</td>
+  <td>Open</td>
+</tr>
+<tr>
+  <td>Sales Engineer</td>
+  <td>14</td>
+  <td>August 29, 2024</td>
+  <td>Closed</td>
+</tr>
+
   </tbody>
         </table>
       </div>
+      <div className="nav-content" id='post-job'>Post Job</div>
+      <div className="search-icon"><i class='bx bx-search'></i></div>
+
     </div>
    </div>
   )

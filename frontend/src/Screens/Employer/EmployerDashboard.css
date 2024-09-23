@@ -41,13 +41,18 @@
     align-items: center;
 }
 #post-job{
+    position: absolute;
+    top: 75px;
+    right: 30px;
     background-color: #0a66c2;
     border-radius: 5px;
     color: white;
+    height: 35px;
+    width: 80px;
 }
 #post-job:hover{
     border: none;
-    background-color: #1e7fe0;
+    /* background-color: #1e7fe0; */
 
 
 }
@@ -107,5 +112,23 @@ table {
   td, th {
     padding: 12px;
   }
-  
+  .search-icon{
+    position: absolute;
+    right: 120px;
+    top: 75px;
+    width: 40px;
+    height: 35px;
+    background-color: #7c7878;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  .search-icon:hover{
+    transform: scale(1.05); 
+    transition: transform 0.3s ease;
+  }
   
