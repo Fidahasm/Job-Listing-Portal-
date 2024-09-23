@@ -1,24 +1,19 @@
 import { useNavigate } from 'react-router-dom'
 import React from 'react'
 import './EmployerDashboard.css'
+import EmployerNavBar from './EmployerNavBar'
 
 function EmployerDashboard() {
-  return (
-   <div className="div-main">
-    <div className="nav-main">
-    <div className="navbar">
-      <div className="nav-content active">Jobs</div>
-      <div className="nav-content">Candidates</div>
-      <div className="nav-content"><i class='bx bx-user-circle'></i>Username</div>
-    </div>
-    </div>
+  
 
+  return (
+   <EmployerNavBar>
     <div className="body-main">
       <div className="table">
         <table>
           <thead>
             <th>Job Title</th>
-            <th>Candidates number</th>
+            <th>Candidates </th>
             <th>Date Posted</th>
             <th>Job Status</th>
           </thead>
@@ -97,7 +92,8 @@ function EmployerDashboard() {
       <div className="search-icon"><i class='bx bx-search'></i></div>
 
     </div>
-   </div>
+
+   </EmployerNavBar>
   )
 }
 
