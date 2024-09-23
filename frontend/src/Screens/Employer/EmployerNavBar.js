@@ -4,7 +4,7 @@ import './EmployerNavBar.css';
 
 function EmployerNavBar({ children }) {
   const navigate = useNavigate();
-  const [activeSection, setActiveSection] = useState('jobs');
+  const [activeSection, setActiveSection] = useState();
 
   const gotoJobs = () => {
     setActiveSection('jobs');
