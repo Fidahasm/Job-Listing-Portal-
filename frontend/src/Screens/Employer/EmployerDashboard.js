@@ -88,9 +88,10 @@ function EmployerDashboard() {
   </tbody>
         </table>
       </div>
+      <div>
       <div className="nav-content" id='post-job'>Post Job</div>
       <div className="search-icon"><i class='bx bx-search'></i></div>
-
+      </div>
     </div>
 
    </EmployerNavBar>
