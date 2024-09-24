@@ -11,7 +11,7 @@
   }
   .header{
     height: 80px;
-    width: 100%;
+
     background-color: aquamarine;
   }
 
@@ -59,10 +59,11 @@
     margin-right: 8px;
   }
   
-  .center-div{
+.center-div{
     width: 80%;
+    padding-bottom: 20px;
 
-  }
+  } 
   
   /* Title for the page */
   .title {
@@ -74,12 +75,13 @@
   .jobs {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
-    gap: 20px;
+    justify-content: space-evenly;
+    gap: 35px;
     width: 100%;
-    margin-left: 50px;
+    margin-left: 30px;
     height: 100vh;
     overflow-y: scroll;
+    overflow-x: hidden;
   }
   .jobs::-webkit-scrollbar{
     display: none;
@@ -90,14 +92,11 @@
     width: 25%;
     padding: 15px;
     height: 220px;
-    background-color: #f1f1f1;
     border-radius: 8px;
     overflow-y: scroll;
-    /* border: 1px solid #111; */
     box-shadow: 0px 4px 6px 1px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transform: translateY(100px); /* Initial position before animation */
-    /* transition: transform 0.4s ease-out, opacity 0.4s ease-out; */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
   }
   .job-box::-webkit-scrollbar{
@@ -107,7 +106,27 @@
     transform: scale(1.2);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
+.right-div{
+  width: 40%;
+}
+.logo{
+  display: flex;
+  width: 100%;
+  
+}
+.logo img{
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  border: 1px solid black;
+  margin-right: 20px;
+}
+.det{
+  display: flex;
+  /* background-color: aqua; */
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
   /* Animation for the job boxes */
   @keyframes slideUp {
@@ -130,19 +149,64 @@
     .job-box{
       width:35% ;
     }
+    .jobs{
+      margin-left: 50px;
+      width: 90%;
+    }
     
   }
   @media only screen and (max-width:780px) {
     .job-box{
       width:40%;
     }
-    .left-div{
+    
+    /* .left-div{
       display: none;
+    } */
+    .job-listing-container{
+      justify-content: center;
+      display: flex;
+    }
+    .jobs{
+      width: 90%;
+      margin: 0;
+    }
+    .center-div{
+      margin-left: 20px;
     }
   }
-  @media only screen and (max-width:550px) {
+@media only screen and (max-width:768px){
+  .left-div{
+    width: 40%;
+  }
+  .job-box{
+    width: 80%;
+  }
+  
+}
+
+  @media only screen and (max-width:630px) {
     .job-box{
       width:65% ;
+    }
+    .jobs{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .center-div{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .left-div{
+      width: 50%;
+    }
+    
+  }
+  @media  only screen and (max-width:500px){
+    .left-div{
+      display: none;
     }
     
   }
