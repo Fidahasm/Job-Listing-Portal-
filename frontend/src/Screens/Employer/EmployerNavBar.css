@@ -15,6 +15,7 @@
     display: flex;
     justify-content: space-evenly;
     font-size: 16px;
+    
   }
   
   .nav-content {
@@ -28,7 +29,7 @@
   
   .nav-content.active, 
   .nav-content:hover {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     transform: scale(1.05);
     transition: transform 0.3s ease;
@@ -67,7 +68,7 @@
     display: block;
     width: 100%;
     padding: 5px 10px;
-    background-color: #f44336;
+    background-color: #0a66c2;
     color: white;
     border: none;
     text-align: center;
@@ -106,9 +107,11 @@
     color: #333; /* Change color as needed */
   }
 
-  @media only screen and (max-width: 1350px){
-   .nav-main{
-    height: 60px;
-   }
+  @media only screen and (max-width: 350px){
+   
+   
+  .nav-content{
+    width: 100px;
+  }
 
 }

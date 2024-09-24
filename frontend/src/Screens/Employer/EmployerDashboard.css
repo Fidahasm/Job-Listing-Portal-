@@ -25,6 +25,9 @@
     overflow-y: scroll;
     overflow-x: scroll;
     border: 0.5px solid #636161;
+    height: auto;
+    max-height: 500px;
+    margin-bottom: 20px;
 }
 .table::-webkit-scrollbar{
     display: none;
@@ -92,16 +95,6 @@ table {
   }
   
   @media only screen and (max-width: 1350px){
-    .search-icon{
-      position: absolute;
-      right: 120px;
-      top: 40px;
-    }
-    #post-job{
-      position: absolute;
-
-      top: 40px;
-      right: 30px;
-    }
+   
     
  }
