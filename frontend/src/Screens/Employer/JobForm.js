@@ -131,7 +131,7 @@ function JobForm() {
 
           <div className="button">
             <div className="job-continue">
-              Continue
+              Submit
               <i className='bx bx-right-arrow-alt' style={{ fontSize: "20px" }}></i>
             </div>
           </div>

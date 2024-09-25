@@ -7,11 +7,10 @@ import Registration from "./Screens/Login/Registration"
 import Admin from "./Screens/Admin/Admin";
 import SignIn from "./Screens/Login/SignIn";
 import EmployerRegistration from "./Screens/Employer/EmployerRegistration";
-import JobForm from "./Screens/Employer/JobForm";
 import 'boxicons/css/boxicons.min.css';
 import UserProfile from "./Screens/UserProfile/UserProfile";
-import EmployerDashboard from "./Screens/Employer/EmployerDashboard";
 import EmployerRoute from "./Screens/Employer/EmployerRoute";
+import ApplyJob from "./Screens/Employer/ApplyJob";
 
 function App() {
   return (
@@ -24,8 +23,9 @@ function App() {
         <Route path="/admin" element = {<Admin/>}/>
         <Route path="/signin" element={<SignIn />}/>
         <Route path="/userprofile" element={<UserProfile />}/>
-        <Route path="/job-form" element={<JobForm/>}/>
         <Route path="/employer/*" element={<EmployerRoute />}/>
+        <Route path="/apply-job" element={<ApplyJob/>}   />
+
 
       </Routes>
     </Router>

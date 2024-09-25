@@ -1,4 +1,4 @@
-.job-maindiv{
+.maindiv-user{
     width: 100%;
     background-color: #ffffff;
     display: flex;
@@ -11,46 +11,40 @@
     font-family: "Indeed Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", Roboto, Noto, sans-serif;
 
 }
-.job-subdiv{
+.subdiv-user{
     width: 60%;
     height: auto;
     /* background-color: aliceblue; */
     display: flex;
     flex-direction: column;
-    /* margin-top: 180px; */
+    /* margin-top: 130px; */
     align-items: center;
     padding-bottom: 30px;
     /* background-color: white; */
 }
-.job-head{
+.head-user{
     width: 90%;
     height: 180px;
     background-color: #f3f2f0;
     border-radius: 10px;
     display: flex;
 }
-.job-head-left{
+.head-left-user{
     width: 50%;
     /* background-color: aqua; */
     height: 100%;
     justify-content: center;
     display: flex;
     flex-direction: column;
-    font-size: 14px;
-    font-weight: 600;
-    /* letter-spacing: 1; */
+    font-size: 15px;
+    font-weight: 700;
 }
-.job-left{
-    margin: 30px;
-}
-.job-head-right{
-    width: 50%;
-    /* background-color: aquamarine; */
-    height: 100%;
-
+.left-user{
+    margin: 32px;
 }
 
-.job-form{
+
+.form{
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -61,20 +55,20 @@
    align-items: center;
 
 }
-.job-form h1{
+.form h1{
     font-size: 24px;
 }
-.job-content{
+.content{
     width: 100%;
     flex-direction: column;
     display: flex;
     font-size: 16px;
     font-weight: 600;
 }
-.job-content label{
+.content label{
     margin-bottom: 5px;
 }
-.job-content input,select{
+.content input,select{
     /* padding: 9px 12px; */
     border-radius: 3px;
     border: 0.1px solid ;
@@ -83,48 +77,7 @@
     padding-left: 5px;
     /* border: none; */
 }
-.h1{
-    width: 100%;
-    padding: 5px;
-}
-.job-content textarea{
-    height: 80px;
-    padding: 5px;
-    font-size: 16px;
-    border-radius: 3px;
-    border: 0.1px solid ;
-
-}
-.job-area{
-    /* flex-direction: column; */
-    width: 100%;
-    /* height: 50px; */
-    display: flex;
-    justify-content: space-between;
-}
-.sub{
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-}
-.rate{
-    display: flex;
-    flex-direction: column;
-    width: 30%;
-}
-.sub input{
-    border-radius: 3px;
-    border: 0.1px solid ;
-    height: 44px;
-    font-size: 16px;
-    padding-left: 5px;
-}
-.sub label{
-    margin-bottom: 5px;
-    font-size: 16px;
-    font-weight: 600;
-}
-.job-continue{
+.continue{
     height: 45px;
     width: 134px;
     justify-content: space-evenly;
@@ -138,27 +91,85 @@
     cursor: pointer;
 }
 
-.job-button{
+
+.form h3{
+    justify-items: left;
+    margin-top:0px;
+}
+
+.add-btn{
+    background-color: rgb(37, 87, 167);
+    width: 70px;
+    height:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.button{
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
 @media only screen and (max-width: 750px){
-    .job-subdiv{
+    .subdiv-user{
         width: 100%;
         margin-top: 80px;
     }
-    .job-form{
+    .form{
         padding: 20px;
     }
 }
 @media only screen and (max-width: 450px){
-    .job-continue{
+    .continue{
         width: 100%;
         justify-content: center;
     }
-    .job-subdiv{
+    .subdiv-user{
         margin-top: 0;
     }
 }
+.delete-btn {
+    background-color: rgb(69, 66, 66);
+    width: 70px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+.edc{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+.remove-skill {
+    margin-left: 10px;
+    color: #323030;
+    cursor: pointer;
+  }
+  .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .skill-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f1f1f1;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    font-weight: normal;
+  }
