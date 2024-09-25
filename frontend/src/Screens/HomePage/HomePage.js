@@ -234,6 +234,11 @@ function HomePage() {
     }));
   };
 
+  const handleClose = () => {
+    setSelectedJob(null); // Use null or '' to clear the selected job
+  };
+  
+
   // Check if any filter is applied
   const isAnyFilterApplied =
     Object.values(experienceFilter).some((val) => val) ||
@@ -445,24 +450,52 @@ function HomePage() {
             <div className="job-description">
               <div className="slct-img">
                 <img src={selectedJob.logoUrl} alt="" />
+                <div className="close-btn" onClick={handleClose}>
+                <p  >X</p>
+
+                </div>
+                
               </div>
               <h3 style={{marginBottom:'0'}}>{selectedJob.title}</h3>
               <h4 style={{color:'rgba(0, 81, 255, 0.893)',marginTop:'5px'}}> {selectedJob.company}</h4>
               <hr/>
               <div className="job-type">
                 <div className="sub">
-                  <p>Job-type</p>
-                <p> {selectedJob.jobType}</p>
+                  <p style={{marginBottom:'0px',color:'rgb(124, 126, 129)',fontSize:'13px'}}>Job-type</p>
+                <p style={{fontWeight:'600',marginTop:'8px'}}> {selectedJob.jobType}</p>
                 </div>
                 <div className="sub">
-                  <p>Work-type</p>
-                <p> {selectedJob.experience}</p>
+                  <p style={{marginBottom:'0px',color:'rgb(124, 126, 129)',fontSize:'13px'}}>Work-type</p>
+                <p style={{fontWeight:'600',marginTop:'8px'}}> {selectedJob.experience}</p>
                 </div>
               
               </div>
-              <p><strong>Location:</strong> {selectedJob.location}</p>
-              <p><strong>Salary:</strong> {selectedJob.salary}</p>
-              {/* Add more job details here */}
+              <div className="job-type">
+              <div className="sub">
+                  <p style={{marginBottom:'0px',color:'rgb(124, 126, 129)',fontSize:'13px'}}>Location</p>
+                <p style={{fontWeight:'600',marginTop:'8px'}}> {selectedJob.location}</p>
+                </div>
+                <div className="sub">
+                  <p style={{marginBottom:'0px',color:'rgb(124, 126, 129)',fontSize:'13px'}}>Salary</p>
+                <p style={{fontWeight:'600',marginTop:'8px'}}> ₹ {selectedJob.salary}</p>
+                </div>
+               
+              
+              </div>
+              <hr />
+              <div className="job-desc">
+                <p><strong>Description</strong></p>
+                <p>{selectedJob.description}</p>
+                <div style={{height:'8px'}}></div>
+                <p><strong>Requirement</strong></p>
+                <p>{selectedJob.description}</p>
+                <div className="btn" >
+                <div className="apply-btn">
+                  Apply
+                </div>
+                </div>
+                
+              </div>
             </div>
           </div>
 
