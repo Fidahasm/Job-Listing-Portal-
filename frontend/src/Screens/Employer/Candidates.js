@@ -33,7 +33,9 @@ function Candidates() {
 
   // Filter candidates based on search query
   const filteredCandidates = candidates.filter(candidate =>
-    candidate.name.toLowerCase().includes(searchQuery.toLowerCase())
+    candidate.name.toLowerCase().includes(searchQuery.toLowerCase())||
+    candidate.position.toLowerCase().includes(searchQuery.toLowerCase())
+
   );
 
   return (
@@ -91,7 +93,7 @@ function Candidates() {
           </div>
         )}
         
-        <div className="nav-content" id='post-job'>Post Job</div>
+        <div  id='post-job'>Post Job</div>
       </div>
     </EmployerNavBar>
   );

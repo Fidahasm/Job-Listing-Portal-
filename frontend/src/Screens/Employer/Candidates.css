@@ -7,17 +7,18 @@
     color: white;
     height: 35px;
     width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 #post-job:hover{
     border: none;
-    /* background-color: #1e7fe0; */
 }
 
 .body-main{
     width: 70%;
     margin-top: 70px;
-    /* height: 300px; */
-    /* background-color: #0a66c2; */
 }
 
 .table{
@@ -35,7 +36,6 @@ table {
     width: 100%;
     border-collapse: collapse;
     font-family: Arial, sans-serif;
-    /* margin-top: 20px; */
 }
   
 thead {
@@ -91,7 +91,6 @@ td, th {
     transition: transform 0.3s ease;
 }
 
-/* Styling for the search bar */
 .search-bar-container {
     position: absolute;
     top: 75px;
@@ -142,3 +141,49 @@ td, th {
   font-size: 20px;
 }
 
+@media only screen and (max-width: 450px){
+   
+  .table{
+    margin-top: 50px;
+  }
+   .search-bar-container {
+    top: 120px;
+    left: 65px;
+    /* width: 300px; */
+    
+  }
+  .search-bar{
+    width: 280px;
+  }
+  .search-bar input {
+    width: 100px;
+  }
+  .srchbtn{
+    width: 60px;
+    margin-left: 5px;
+
+  }
+  
+.close-btn{
+  margin-left: 5px;
+}
+  
+}
+@media only screen and (max-width: 420px){
+  .search-bar-container {
+    top: 120px;
+    left: 60px;
+    
+  }
+ 
+
+}
+@media only screen and (max-width: 380px){
+  .search-bar-container {
+    top: 120px;
+    left: 50px;
+    
+  }
+ 
+
+}
