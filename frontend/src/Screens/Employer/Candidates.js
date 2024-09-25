@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Candidates.css';
 import EmployerNavBar from './EmployerNavBar';
 
@@ -16,13 +16,49 @@ const candidates = [
   { name: "Kevin Spacey", email: "kevin.spacey@example.com", phone: "123-456-7890", position: "Business Analyst", date: "2024-09-11", resume: "resume11.pdf" },
   { name: "Laura Croft", email: "laura.croft@example.com", phone: "234-567-8901", position: "Software Tester", date: "2024-09-12", resume: "resume12.pdf" },
   { name: "Mike Wazowski", email: "mike.wazowski@example.com", phone: "345-678-9012", position: "Network Engineer", date: "2024-09-13", resume: "resume13.pdf" },
- { name: "Diana Prince", email: "diana.prince@example.com", phone: "012-345-6789", position: "Cybersecurity Consultant", date: "2024-09-30", resume: "resume30.pdf" },
+  { name: "Diana Prince", email: "diana.prince@example.com", phone: "012-345-6789", position: "Cybersecurity Consultant", date: "2024-09-30", resume: "resume30.pdf" },
 ];
 
 function Candidates() {
+  const [showSearchBar, setShowSearchBar] = useState(false);  // Toggle search bar
+  const [searchQuery, setSearchQuery] = useState('');  // Search query input
+
+  const toggleSearchBar = () => {
+    setShowSearchBar(!showSearchBar);
+  };
+
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  // Filter candidates based on search query
+  const filteredCandidates = candidates.filter(candidate =>
+    candidate.name.toLowerCase().includes(searchQuery.toLowerCase())||
+    candidate.position.toLowerCase().includes(searchQuery.toLowerCase())
+
+  );
+
   return (
     <EmployerNavBar>
       <div className="body-main">
+        
+        {/* Search Bar Section */}
+        <div className="search-bar-container">
+          {showSearchBar && (
+            <div className="search-bar">
+              <input
+                type="text"
+                placeholder="Search candidates"
+                value={searchQuery}
+                onChange={handleSearchChange}
+              />
+              <button className='srchbtn'>Search</button>
+              <button className='close-btn' onClick={toggleSearchBar}>&times;</button>
+            </div>
+          )}
+        </div>
+
+        {/* Candidates Table */}
         <div className="table">
           <table>
             <thead>
@@ -36,7 +72,7 @@ function Candidates() {
               </tr>
             </thead>
             <tbody>
-              {candidates.map((candidate, index) => (
+              {filteredCandidates.map((candidate, index) => (
                 <tr key={index}>
                   <td>{candidate.name}</td>
                   <td>{candidate.email}</td>
@@ -49,8 +85,15 @@ function Candidates() {
             </tbody>
           </table>
         </div>
-        <div className="nav-content" id='post-job'>Post Job</div>
-        <div className="search-icon"><i className='bx bx-search'></i></div>
+
+        {/* Conditionally render the search icon only when the search bar is not shown */}
+        {!showSearchBar && (
+          <div className="search-icon" onClick={toggleSearchBar}>
+            <i className='bx bx-search'></i>
+          </div>
+        )}
+        
+        <div  id='post-job'>Post Job</div>
       </div>
     </EmployerNavBar>
   );
