@@ -24,44 +24,196 @@ function HomePage() {
     OnSite: false,
     Remote: false,
   });
+  const [likedJobs,setLikedJobs]=useState({})
 
   // Simulated job data
   useEffect(() => {
     const fetchedJobs = [
-      { id: 1, title: 'Frontend Developer', company: 'Google', location: 'California', experience: 'fresher', salary: 15000, jobType: 'OnSite' },
-      { id: 2, title: 'Backend Developer', company: 'Amazon', location: 'Washington', experience: 'fullTime', salary: 60000, jobType: 'Remote' },
-      { id: 3, title: 'Full Stack Developer', company: 'Microsoft', location: 'Texas', experience: 'internship', salary: 8000, jobType: 'OnSite' },
-      { id: 4, title: 'Data Scientist', company: 'Facebook', location: 'New York', experience: 'freelance', salary: 85000, jobType: 'Remote' },
-      { id: 5, title: 'UI/UX Designer', company: 'Adobe', location: 'San Francisco', experience: 'fresher', salary: 20000, jobType: 'OnSite' },
-      { id: 6, title: 'Cloud Engineer', company: 'IBM', location: 'Chicago', experience: 'fullTime', salary: 70000, jobType: 'Remote' },
-      { id: 7, title: 'DevOps Engineer', company: 'Intel', location: 'Boston', experience: 'freelance', salary: 90000, jobType: 'OnSite' },
-      { id: 8, title: 'Machine Learning Engineer', company: 'Nvidia', location: 'Los Angeles', experience: 'internship', salary: 10000, jobType: 'OnSite' },
-      { id: 9, title: 'Cybersecurity Analyst', company: 'Cisco', location: 'Miami', experience: 'fullTime', salary: 80000, jobType: 'Remote' },
-      { id: 10, title: 'Software Engineer', company: 'Tesla', location: 'Nevada', experience: 'fresher', salary: 30000, jobType: 'OnSite' },
-      { id: 11, title: 'Database Administrator', company: 'Oracle', location: 'Austin', experience: 'fullTime', salary: 75000, jobType: 'Remote' },
-      { id: 12, title: 'Network Engineer', company: 'HP', location: 'Denver', experience: 'freelance', salary: 65000, jobType: 'OnSite' },
-      { id: 13, title: 'Technical Support Engineer', company: 'Dell', location: 'San Diego', experience: 'internship', salary: 12000, jobType: 'Remote' },
-      { id: 14, title: 'Mobile App Developer', company: 'Snapchat', location: 'Seattle', experience: 'fresher', salary: 25000, jobType: 'OnSite' },
-      { id: 15, title: 'Product Manager', company: 'Spotify', location: 'New York', experience: 'fullTime', salary: 95000, jobType: 'Remote' },
-      { id: 16, title: 'Game Developer', company: 'Sony', location: 'Los Angeles', experience: 'freelance', salary: 85000, jobType: 'OnSite' },
-      { id: 17, title: 'Blockchain Developer', company: 'Coinbase', location: 'San Francisco', experience: 'fullTime', salary: 100000, jobType: 'Remote' },
-      { id: 18, title: 'AR/VR Developer', company: 'Meta', location: 'New York', experience: 'internship', salary: 15000, jobType: 'OnSite' },
-      { id: 19, title: 'AI Researcher', company: 'OpenAI', location: 'Texas', experience: 'fullTime', salary: 110000, jobType: 'Remote' },
-      { id: 20, title: 'IT Consultant', company: 'Accenture', location: 'Chicago', experience: 'freelance', salary: 60000, jobType: 'OnSite' },
-      { id: 21, title: 'Data Engineer', company: 'Netflix', location: 'San Francisco', experience: 'fresher', salary: 50000, jobType: 'OnSite' },
-      { id: 22, title: 'QA Engineer', company: 'Samsung', location: 'New York', experience: 'fullTime', salary: 65000, jobType: 'Remote' },
-      { id: 23, title: 'Salesforce Developer', company: 'Salesforce', location: 'Denver', experience: 'freelance', salary: 90000, jobType: 'Remote' },
-      { id: 24, title: 'Business Analyst', company: 'Google', location: 'California', experience: 'internship', salary: 20000, jobType: 'OnSite' },
-      { id: 25, title: 'Systems Engineer', company: 'SpaceX', location: 'Texas', experience: 'fullTime', salary: 75000, jobType: 'OnSite' },
-      { id: 26, title: 'Solutions Architect', company: 'AWS', location: 'Seattle', experience: 'freelance', salary: 85000, jobType: 'Remote' },
-      { id: 27, title: 'Digital Marketing Specialist', company: 'TikTok', location: 'Los Angeles', experience: 'fullTime', salary: 60000, jobType: 'OnSite' },
-      { id: 28, title: 'Big Data Engineer', company: 'Uber', location: 'San Francisco', experience: 'fresher', salary: 45000, jobType: 'OnSite' },
-      { id: 29, title: 'IT Support Specialist', company: 'Microsoft', location: 'New York', experience: 'internship', salary: 18000, jobType: 'Remote' },
-      { id: 30, title: 'Software Architect', company: 'Google', location: 'California', experience: 'fullTime', salary: 120000, jobType: 'OnSite' }
-
+      { 
+        id: 1, title: 'Frontend Developer', company: 'Google', location: 'California', 
+        experience: 'fresher', salary: 15000, jobType: 'OnSite', 
+        postedDate: '2024-09-25', applicants: 25, 
+        description: 'Design and implement user interfaces using React and CSS for Google’s internal web apps.',
+        logoUrl: 'https://logo.clearbit.com/google.com'
+      },
+      { 
+        id: 2, title: 'Backend Developer', company: 'Amazon', location: 'Washington', 
+        experience: 'fullTime', salary: 60000, jobType: 'Remote', 
+        postedDate: '2024-09-24', applicants: 30, 
+        description: 'Develop scalable APIs and manage databases for Amazon’s cloud platforms using Node.js and AWS.',
+        logoUrl: 'https://logo.clearbit.com/amazon.com'
+      },
+      { 
+        id: 3, title: 'Full Stack Developer', company: 'Microsoft', location: 'Texas', 
+        experience: 'internship', salary: 8000, jobType: 'OnSite', 
+        postedDate: '2024-09-22', applicants: 40, 
+        description: 'Work on both frontend and backend tasks for Microsoft’s internal tools using React and Express.js.',
+        logoUrl: 'https://logo.clearbit.com/microsoft.com'
+      },
+      { 
+        id: 4, title: 'Data Scientist', company: 'Facebook', location: 'New York', 
+        experience: 'freelance', salary: 85000, jobType: 'Remote', 
+        postedDate: '2024-09-21', applicants: 55, 
+        description: 'Analyze large datasets to help drive business decisions and improve Facebook’s recommendation algorithms.',
+        logoUrl: 'https://logo.clearbit.com/facebook.com'
+      },
+      { 
+        id: 5, title: 'UI/UX Designer', company: 'Adobe', location: 'San Francisco', 
+        experience: 'fresher', salary: 20000, jobType: 'OnSite', 
+        postedDate: '2024-09-20', applicants: 18, 
+        description: 'Create user-friendly designs for Adobe’s creative products, focusing on enhancing customer experience.',
+        logoUrl: 'https://logo.clearbit.com/adobe.com'
+      },
+      { 
+        id: 6, title: 'Cloud Engineer', company: 'IBM', location: 'Chicago', 
+        experience: 'fullTime', salary: 70000, jobType: 'Remote', 
+        postedDate: '2024-09-19', applicants: 35, 
+        description: 'Manage and optimize cloud-based infrastructure using IBM Cloud and other third-party tools.',
+        logoUrl: 'https://logo.clearbit.com/ibm.com'
+      },
+      { 
+        id: 7, title: 'DevOps Engineer', company: 'Intel', location: 'Boston', 
+        experience: 'freelance', salary: 90000, jobType: 'OnSite', 
+        postedDate: '2024-09-18', applicants: 22, 
+        description: 'Develop automated deployment pipelines and manage Intel’s cloud infrastructure using CI/CD practices.',
+        logoUrl: 'https://logo.clearbit.com/intel.com'
+      },
+      { 
+        id: 8, title: 'Machine Learning Engineer', company: 'Nvidia', location: 'Los Angeles', 
+        experience: 'internship', salary: 10000, jobType: 'OnSite', 
+        postedDate: '2024-09-17', applicants: 10, 
+        description: 'Work on machine learning algorithms to improve performance of Nvidia’s graphics and AI models.',
+        logoUrl: 'https://logo.clearbit.com/nvidia.com'
+      },
+      { 
+        id: 9, title: 'Cybersecurity Analyst', company: 'Cisco', location: 'Miami', 
+        experience: 'fullTime', salary: 80000, jobType: 'Remote', 
+        postedDate: '2024-09-16', applicants: 42, 
+        description: 'Monitor and protect Cisco’s network infrastructure from cyber threats and security breaches.',
+        logoUrl: 'https://logo.clearbit.com/cisco.com'
+      },
+      { 
+        id: 10, title: 'Software Engineer', company: 'Tesla', location: 'Nevada', 
+        experience: 'fresher', salary: 30000, jobType: 'OnSite', 
+        postedDate: '2024-09-15', applicants: 50, 
+        description: 'Work on Tesla’s internal software tools, focusing on vehicle automation and AI integration.',
+        logoUrl: 'https://logo.clearbit.com/tesla.com'
+      },
+      { 
+        id: 11, title: 'Database Administrator', company: 'Oracle', location: 'Austin', 
+        experience: 'fullTime', salary: 75000, jobType: 'Remote', 
+        postedDate: '2024-09-14', applicants: 20, 
+        description: 'Manage and optimize Oracle’s databases for performance and scalability across various projects.',
+        logoUrl: 'https://logo.clearbit.com/oracle.com'
+      },
+      { 
+        id: 12, title: 'Network Engineer', company: 'HP', location: 'Denver', 
+        experience: 'freelance', salary: 65000, jobType: 'OnSite', 
+        postedDate: '2024-09-13', applicants: 28, 
+        description: 'Design and maintain secure and efficient network architectures for HP’s enterprise solutions.',
+        logoUrl: 'https://logo.clearbit.com/hp.com'
+      },
+      { 
+        id: 13, title: 'Technical Support Engineer', company: 'Dell', location: 'San Diego', 
+        experience: 'internship', salary: 12000, jobType: 'Remote', 
+        postedDate: '2024-09-12', applicants: 15, 
+        description: 'Provide technical assistance and troubleshoot issues for Dell’s enterprise customers.',
+        logoUrl: 'https://logo.clearbit.com/dell.com'
+      },
+      { 
+        id: 14, title: 'Mobile App Developer', company: 'Snapchat', location: 'Seattle', 
+        experience: 'fresher', salary: 25000, jobType: 'OnSite', 
+        postedDate: '2024-09-11', applicants: 33, 
+        description: 'Develop new features for Snapchat’s mobile app using Flutter and integrate third-party services.',
+        logoUrl: 'https://logo.clearbit.com/snapchat.com'
+      },
+      { 
+        id: 15, title: 'Product Manager', company: 'Spotify', location: 'New York', 
+        experience: 'fullTime', salary: 95000, jobType: 'Remote', 
+        postedDate: '2024-09-10', applicants: 45, 
+        description: 'Manage product development for Spotify’s streaming platform, focusing on user engagement features.',
+        logoUrl: 'https://logo.clearbit.com/spotify.com'
+      },
+      { 
+        id: 16, title: 'Game Developer', company: 'Sony', location: 'Los Angeles', 
+        experience: 'freelance', salary: 85000, jobType: 'OnSite', 
+        postedDate: '2024-09-09', applicants: 37, 
+        description: 'Develop interactive gaming experiences for Sony PlayStation’s latest VR game titles.',
+        logoUrl: 'https://logo.clearbit.com/sony.com'
+      },
+      { 
+        id: 17, title: 'Blockchain Developer', company: 'Coinbase', location: 'San Francisco', 
+        experience: 'fullTime', salary: 100000, jobType: 'Remote', 
+        postedDate: '2024-09-08', applicants: 18, 
+        description: 'Build and maintain blockchain smart contracts and security systems for Coinbase’s trading platforms.',
+        logoUrl: 'https://logo.clearbit.com/coinbase.com'
+      },
+      { 
+        id: 18, title: 'AR/VR Developer', company: 'Meta', location: 'New York', 
+        experience: 'internship', salary: 15000, jobType: 'OnSite', 
+        postedDate: '2024-09-07', applicants: 27, 
+        description: 'Develop virtual reality interfaces for Meta’s social platforms using Unity and Unreal Engine.',
+        logoUrl: 'https://logo.clearbit.com/meta.com'
+      },
+      { 
+        id: 19, title: 'AI Researcher', company: 'OpenAI', location: 'Texas', 
+        experience: 'fullTime', salary: 110000, jobType: 'Remote', 
+        postedDate: '2024-09-06', applicants: 35, 
+        description: 'Conduct research on AI and machine learning models for OpenAI’s latest projects.',
+        logoUrl: 'https://logo.clearbit.com/openai.com'
+      },
+      { 
+        id: 20, title: 'IT Consultant', company: 'Accenture', location: 'Chicago', 
+        experience: 'freelance', salary: 60000, jobType: 'OnSite', 
+        postedDate: '2024-09-05', applicants: 20, 
+        description: 'Provide IT consultancy services to improve business efficiency for Accenture’s global clients.',
+        logoUrl: 'https://logo.clearbit.com/accenture.com'
+      },
+      { 
+        id: 21, title: 'Data Engineer', company: 'Netflix', location: 'San Francisco', 
+        experience: 'fresher', salary: 50000, jobType: 'OnSite', 
+        postedDate: '2024-09-04', applicants: 40, 
+        description: 'Develop and maintain Netflix’s data pipelines for processing user data and content analytics.',
+        logoUrl: 'https://logo.clearbit.com/netflix.com'
+      },
+      { 
+        id: 22, title: 'QA Engineer', company: 'Samsung', location: 'New York', 
+        experience: 'fullTime', salary: 65000, jobType: 'Remote', 
+        postedDate: '2024-09-03', applicants: 25, 
+        description: 'Test and ensure quality for Samsung’s consumer electronics and software products.',
+        logoUrl: 'https://logo.clearbit.com/samsung.com'
+      },
+      { 
+        id: 23, title: 'Salesforce Developer', company: 'Salesforce', location: 'Denver', 
+        experience: 'freelance', salary: 90000, jobType: 'Remote', 
+        postedDate: '2024-09-02', applicants: 18, 
+        description: 'Develop and customize Salesforce applications for various clients using Apex and Visualforce.',
+        logoUrl: 'https://logo.clearbit.com/salesforce.com'
+      },
+      { 
+        id: 24, title: 'Business Analyst', company: 'Google', location: 'California', 
+        experience: 'internship', salary: 20000, jobType: 'OnSite', 
+        postedDate: '2024-09-01', applicants: 22, 
+        description: 'Analyze business data and help improve decision-making for Google’s internal projects.',
+        logoUrl: 'https://logo.clearbit.com/google.com'
+      },
     ];
     setJobs(fetchedJobs);
   }, []);
+
+  function getRelativePostedDate(postedDate) {
+    const today = new Date();
+    const posted = new Date(postedDate);
+    const differenceInTime = today - posted;
+    const differenceInDays = Math.floor(differenceInTime / (1000 * 60 * 60 * 24));
+  
+    if (differenceInDays === 0) {
+      return 'Today';
+    } else if (differenceInDays === 1) {
+      return '1 day ago';
+    } else {
+      return `${differenceInDays} days ago`;
+    }}
 
   // Checkbox handlers
   const handleExperienceChange = (e) => {
@@ -74,6 +226,12 @@ function HomePage() {
 
   const handleJobTypeChange = (e) => {
     setJobTypeFilter({ ...jobTypeFilter, [e.target.name]: e.target.checked });
+  };
+  const handleLike = (jobId) => {
+    setLikedJobs((prevLikedJobs) => ({
+      ...prevLikedJobs,
+      [jobId]: !prevLikedJobs[jobId],
+    }));
   };
 
   // Check if any filter is applied
@@ -170,44 +328,111 @@ function HomePage() {
             {isAnyFilterApplied ? (
               filteredJobs.length > 0 ? (
                 filteredJobs.map((job, index) => (
-                  <div key={job.id} className="job-box animate-job" style={{ animationDelay: `${index * 0.2}s` }} onClick={() => handleJobDescription(job)}>
-                    <div className="logo">
-                      <img src="" alt="" />
-                      <h3>{job.title}</h3>
-
+                  <div key={job.id} className="job-box animate-job" style={{ animationDelay: `${index * 0.2}s` }} >
+                  <div className="logo" >
+                    <div className="image">
+                    <img onClick={() => handleJobDescription(job)} src={job.logoUrl} alt="" />
 
                     </div>
-                    <p><strong>Company:</strong> {job.company}</p>
-                    <p><strong>Location:</strong> {job.location}</p>
-                    <p><strong>Experience:</strong> {job.experience}</p>
-                    <p><strong>Salary:</strong> {job.salary}</p>
-                    <p><strong>Job Type:</strong> {job.jobType}</p>
+                    <div className="name" onClick={() => handleJobDescription(job)}>
+                      <h3>{job.title}</h3>
+                      <div className="det">
+                        <p> {job.company}</p>
+                        <div style={{ width: '15px' }}></div>
+                        <p> {job.location}</p>
+                      </div>
+                    </div>
+                    
+                   
+
                   </div>
+                  <div className="type">
+                    <div className="small">
+                    <p> {job.experience}</p>
+
+                    </div>
+                    <div style={{width:'30px'}}></div>
+                    <div className="small">
+                    <p> {job.jobType}</p>
+
+                    </div>
+                    <div style={{width:'30px'}}></div>
+
+                    <div className="small">
+                    <p><strong>₹</strong> {job.salary}</p>
+
+                    </div>
+
+                  </div>
+                  <div className="desc">
+                    <p>{job.description}</p>
+                  </div>
+                  <div className="details">
+                    <p style={{color:'rgb(124, 126, 129)'}}> {getRelativePostedDate(job.postedDate)}</p>
+                  <p style={{color:'rgba(0, 81, 255, 0.893)'}}>{job.applicants} Applicants</p>
+                 <div onClick={() => handleLike(job.id)}>
+                    {likedJobs[job.id] ?( <i className='bx bxs-bookmark-star' style={{color:' rgb(0, 170, 255)'}}></i>):
+                   (<i className='bx bx-bookmark'  ></i>)
+                   }
+                    </div>
+                  </div>
+                 
+                </div>
                 ))
               ) : (
                 <p>No jobs match the selected filters.</p>
               )
             ) : (
               jobs.map((job, index) => (
-                <div key={job.id} className="job-box animate-job" style={{ animationDelay: `${index * 0.2}s` }} onClick={() => handleJobDescription(job)}>
-                  <div className="logo">
-                    <img src='data:image/png;base64,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' alt="" />
-                    <div className="name">
+                <div key={job.id} className="job-box animate-job" style={{ animationDelay: `${index * 0.2}s` }} >
+                  <div className="logo" >
+                    <div className="image">
+                    <img onClick={() => handleJobDescription(job)} src={job.logoUrl} alt="" />
+
+                    </div>
+                    <div className="name" onClick={() => handleJobDescription(job)}>
                       <h3>{job.title}</h3>
                       <div className="det">
-                      <p> {job.company}</p>
-                      <p> {job.location}</p>
+                        <p> {job.company}</p>
+                        <div style={{ width: '15px' }}></div>
+                        <p> {job.location}</p>
                       </div>
-                     
+                    </div>
+                    
+                   
+
+                  </div>
+                  <div className="type">
+                    <div className="small">
+                    <p> {job.experience}</p>
+
+                    </div>
+                    <div style={{width:'30px'}}></div>
+                    <div className="small">
+                    <p> {job.jobType}</p>
+
+                    </div>
+                    <div style={{width:'30px'}}></div>
+
+                    <div className="small">
+                    <p><strong>₹</strong> {job.salary}</p>
 
                     </div>
 
-
-
                   </div>
-                  <p><strong>Experience:</strong> {job.experience}</p>
-                  <p><strong>Salary:</strong> {job.salary}</p>
-                  <p><strong>Job Type:</strong> {job.jobType}</p>
+                  <div className="desc">
+                    <p>{job.description}</p>
+                  </div>
+                  <div className="details">
+                    <p style={{color:'rgb(124, 126, 129)'}}> {getRelativePostedDate(job.postedDate)}</p>
+                  <p style={{color:'rgba(0, 81, 255, 0.893)'}}>{job.applicants} Applicants</p>
+                 <div onClick={() => handleLike(job.id)}>
+                    {likedJobs[job.id] ?( <i className='bx bxs-bookmark-star' style={{color:' rgb(0, 170, 255)'}}></i>):
+                   (<i className='bx bx-bookmark'  ></i>)
+                   }
+                    </div>
+                  </div>
+                 
                 </div>
               ))
             )}
@@ -218,12 +443,25 @@ function HomePage() {
           <div className="right-div">
 
             <div className="job-description">
-              <h2>{selectedJob.title}</h2>
-              <p><strong>Company:</strong> {selectedJob.company}</p>
+              <div className="slct-img">
+                <img src={selectedJob.logoUrl} alt="" />
+              </div>
+              <h3 style={{marginBottom:'0'}}>{selectedJob.title}</h3>
+              <h4 style={{color:'rgba(0, 81, 255, 0.893)',marginTop:'5px'}}> {selectedJob.company}</h4>
+              <hr/>
+              <div className="job-type">
+                <div className="sub">
+                  <p>Job-type</p>
+                <p> {selectedJob.jobType}</p>
+                </div>
+                <div className="sub">
+                  <p>Work-type</p>
+                <p> {selectedJob.experience}</p>
+                </div>
+              
+              </div>
               <p><strong>Location:</strong> {selectedJob.location}</p>
-              <p><strong>Experience:</strong> {selectedJob.experience}</p>
               <p><strong>Salary:</strong> {selectedJob.salary}</p>
-              <p><strong>Job Type:</strong> {selectedJob.jobType}</p>
               {/* Add more job details here */}
             </div>
           </div>
