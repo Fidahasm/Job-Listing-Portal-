@@ -1,6 +1,8 @@
-import React,{useState} from 'react'
+import React,{useState} from 'react' 
+import { useNavigate } from 'react-router-dom';
 import './EmployerDashboard.css'
 import EmployerNavBar from './EmployerNavBar'
+
 
 const jobs = [
   { job: "Software Engineer", candidates: "25", date: "September 15, 2024", jobStatus: "Open" },
@@ -19,10 +21,13 @@ const jobs = [
 
 
 function EmployerDashboard() {
+  const navigate = useNavigate()
   const [showSearchBar,setShowSearchBar] = useState(false)
   const [searchQuery,setSearchQuery] = useState('')
 
-
+const gotoJobForm = () =>{
+  navigate('/employer/job-form')
+}
 
 const toggleSearchBar = () =>{
   setShowSearchBar(!showSearchBar);
@@ -82,7 +87,7 @@ const filteredJobs = jobs.filter(job =>
       {!showSearchBar &&(
       <div className="search-icon" onClick={toggleSearchBar}><i class='bx bx-search'></i></div>
     )}
-      <div id='post-job'>Post Job</div>
+      <div id='post-job' onClick={gotoJobForm}>Post Job</div>
 
       </div>
   
