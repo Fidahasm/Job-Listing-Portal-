@@ -27,8 +27,6 @@ function App() {
         <Route path="/t" element={<Test/>}/>
         <Route path="/employer/*" element={<EmployerRoute />}/>
         <Route path="/apply-job" element={<ApplyJob/>}   />
-
-
       </Routes>
     </Router>
  
