@@ -15,7 +15,6 @@
   }
   .header{
     height: 80px;
-
     background-color: aquamarine;
   }
 
@@ -414,3 +413,101 @@ height: 50px;
   padding-right: 0;
 }
   }
+  .nav-right-bar{
+    width: 60%;
+    height: 80px;
+    /* background-color: yellowgreen; */
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10px;
+    /* padding:  0px 5px; */
+  }
+.search-main-div{
+  width: 80%;
+  height: 50px;
+  /* background-color: whitesmoke; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sign-in-btn{
+  width: 60px;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.employer-login-btn{
+  width: 160px;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+.job-title{
+  margin:0px 5px ;
+  background-color: white;
+  width: 300px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 10px;
+  padding: 0px 5px;
+  
+
+}
+.job-title i{
+  font-size: 30px;
+}
+.search-main-div input{
+  border: none;
+  height: 30px;
+  width: 250px;
+  outline: none;
+  box-shadow: none;
+  font-size: 16px;
+}
+.location{
+  margin: 0px 5px ;
+  width: 300px;
+  height: 50px;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 10px;
+  padding: 0px 5px;
+  background-color: white;
+}
+.location img{
+  width: 25px;
+  height: 25px;
+}
+.find-button{
+  width: 85px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(37, 87, 167);
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+
+}

@@ -1,10 +1,19 @@
 import React, { useEffect, useState } from 'react';
+import {useNavigate} from 'react-router-dom'
 import './Home.css';
+import locationPin from '../../assets/location-pin.png';
+
 
 function HomePage() {
+  const navigate  = useNavigate()
   const [jobs, setJobs] = useState([]);
   const [selectedJob, setSelectedJob] = useState(null);
-
+  const gotoEmployerPage = () =>{
+    navigate('/employer/employer-home');
+  }
+  const gotoLoginPage = () =>{
+    navigate('/login')
+  }
   // Filters state
   const [experienceFilter, setExperienceFilter] = useState({
     internship: false,
@@ -278,10 +287,28 @@ function HomePage() {
     <div className="main">
       <div className="header">
       <i className='bx bx-filter'></i>
+      <div className="nav-right-bar">
+        <div className="search-main-div">
+        <div className="job-title">
+        <i class='bx bx-search'></i>
+          <input type="text" />
+          <span style={{ fontSize: '24px', cursor: 'pointer'}}>&times;</span>
+        </div>
+        <div className="location">
+          <img src={locationPin} alt="ERROR" />
+          <input type="text" />
+          <span style={{ fontSize: '24px', cursor: 'pointer'}}>&times;</span>
+          </div>
+        <div className="find-button">Find Jobs</div>
+      </div>
+      <div className="sign-in-btn" onClick={gotoLoginPage}>Sign in</div>
+      <div className="employer-login-btn" onClick={gotoEmployerPage}>Employers/Post Job</div>
+      </div>
       </div>
       <div className="job-listing-container">
         <div className="left-div">
-          <div className="profile"></div>
+          <div className="profile">
+          </div>
           <div className="filter-checkboxes">
             <h4>Experience Level</h4>
             <label>
