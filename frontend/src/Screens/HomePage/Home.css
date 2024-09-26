@@ -8,6 +8,10 @@
     font-family: Arial, sans-serif;
     display: flex;
     padding-top: 40px;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
   }
   .header{
     height: 80px;
@@ -118,6 +122,8 @@
   margin-right: 30px;
   border-radius: 10px;
   margin-left: 20px;
+  transition: width 0.3s ease;
+
 }
 .logo{
   display: flex;
@@ -192,6 +198,12 @@ align-items: start;
   position: relative;
   left: 33%;
   bottom: 15%;
+  width: 30px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .image{
@@ -266,6 +278,12 @@ height: 50px;
     animation: slideUp 0.8s forwards;
   }
   
+
+  @media only screen and (max-width:1250px){
+    .close-btn{
+      left:25%;
+    }
+  }
   @media only screen and (max-width:1000px) {
     .job-box{
       width:250px ;
@@ -278,17 +296,15 @@ height: 50px;
     .center-div{
       width: 80%;
       margin-right: 0;
-      /* padding: 10px; */
       display: flex;
       justify-content: center;
-      /* align-items: center; */
     }
     .right-div{
       width: 550px;
       margin-right: 0;
     }
     .left-div{
-      width: 350px;
+      width: 250px;
     }
     
   }
@@ -297,12 +313,18 @@ height: 50px;
       width:300px;
     }
     .right-div{
-      margin-right: 0;
+      width: 85%; 
+      right: 5%;
+      top: 10px;
+      background-color: white;
+      z-index: 2;
+      position: absolute;
+    
+    }.close-btn{
+      left: 37%;
     }
     
-    /* .left-div{
-      display: none;
-    } */
+  
     .job-listing-container{
       justify-content: center;
       display: flex;
@@ -327,7 +349,10 @@ height: 50px;
   }
   
 }
+@media only screen and (min-width:630px){
 
+
+}
   @media only screen and (max-width:630px) {
     .job-box{
       width:300px ;
@@ -347,16 +372,11 @@ height: 50px;
       display: none;
       width: 50%;
     }
-    .right-div{
-      width: 40%;
-      margin: 0;
-    }
+   
     
   }
   @media  only screen and (max-width:550px){
-    .job-listing-container{
-      padding: 5px;
-    }
+    
     .job-box{
       width: 350px;
     }
@@ -364,12 +384,33 @@ height: 50px;
       width: 100%;
     }
     .center-div{
-      width: 80%;
+      width: 80%; 
+      right: 0;
+      top: 0;
+      background-color: white;
     }
-    .right-div{
-      width: 350px;
+    .close-btn{
+      left: 30%;
     }
+   
     .type{
       justify-content: space-evenly;
     }
+  }
+
+  @media only screen and (max-width:300px){
+.close-btn{
+  left: 27%;
+}
+.right-div{
+  right: 0;
+}
+.center-div{
+  width: 100%;
+  margin: 0;
+}
+.job-listing-container{
+  padding-left: 0;
+  padding-right: 0;
+}
   }
