@@ -24,7 +24,7 @@ const handleRemoveSkill = (indexToRemove) =>{
         <div className="head-user">
           <div className="head-left-user">
             <div className='left-user'>
-              <h1>Complete Your Profile</h1>
+              <h1>Front End Developer <br /> <span style={{color:'#425df5'}}>Google</span></h1>
             </div>
           </div>
         </div>

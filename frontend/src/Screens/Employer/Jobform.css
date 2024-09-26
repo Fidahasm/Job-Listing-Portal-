@@ -73,6 +73,8 @@
 }
 .job-content label{
     margin-bottom: 5px;
+    margin-left: 0px;
+
 }
 .job-content input,select{
     /* padding: 9px 12px; */
