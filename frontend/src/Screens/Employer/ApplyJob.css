@@ -152,6 +152,9 @@
     flex-direction: column;
     padding-bottom: 30px;
 }
+.edc label{
+    margin-left: 0px;
+}
 .remove-skill {
     margin-left: 10px;
     color: #323030;
@@ -173,3 +176,18 @@
     font-size: 14px;
     font-weight: normal;
   }
+  .resume-upload{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+  }
+  .resume-upload input[type="file"]::file-selector-button{
+width: 150px;
+height: 44px;
+font-size: 16px;
+border: none;
+}
+.resume-upload input[type="file"]:hover::file-selector-button {
+  background-color: #4a4848;
+  color: white;
+}

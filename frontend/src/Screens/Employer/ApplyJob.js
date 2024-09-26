@@ -72,20 +72,9 @@ const handleRemoveSkill = (indexToRemove) =>{
                 <input type="text" required />
               </div>
 
-              {/* {educationForms.length > 1 && (
-                <div className="delete-btn" onClick={() => deleteEducationForm(index)} >
-                  Delete
-                </div>
-              )} */}
+              
             </div>
-        
-{/* 
-          <div className="content">
-            <div className="add-btn" onClick={addEducationForm}>
-              Add
-              <i className='bx bx-plus' style={{ fontSize: "20px" }}></i>
-            </div>
-          </div> */}
+
 
           <div className='content'>
             <h3 style={{marginBottom:'32px'}}>Add Skills</h3>
@@ -110,8 +99,13 @@ const handleRemoveSkill = (indexToRemove) =>{
             </div>
           </div>
 
+         <div className="resume-upload">
+            <h3>Upload Resume</h3>
+            <input type="file"  />
+            </div>
+
           <div className="button">
-            <div className="continue">Save</div>
+            <div className="continue">Apply</div>
           </div>
         </div>
       </div>
