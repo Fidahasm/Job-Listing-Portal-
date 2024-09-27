@@ -246,6 +246,13 @@ function HomePage() {
   const handleClose = () => {
     setSelectedJob(null); // Use null or '' to clear the selected job
   };
+
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const toggleSidebar = () => {
+    setShowSidebar(!showSidebar);
+    console.log("Sidebar visibility toggled:", !showSidebar); // Logging the toggled state correctly
+  };
   
 
   // Check if any filter is applied
@@ -286,11 +293,11 @@ function HomePage() {
   return (
     <div className="main">
       <div className="header">
-      <i className='bx bx-filter' id='filter-icon'></i>
+      <i className='bx bx-filter' id='filter-icon' onClick={toggleSidebar}></i>
       <div className="nav-right-bar">
         <div className="search-main-div">
         <div className="job-title">
-        <i class='bx bx-search'></i>
+        <i className='bx bx-search'></i>
           <input type="text" />
           <span style={{ fontSize: '24px', cursor: 'pointer'}}>&times;</span>
         </div>
@@ -306,7 +313,7 @@ function HomePage() {
       </div>
       </div>
       <div className="job-listing-container">
-        <div className="left-div">
+        <div className={`left-div ${showSidebar ? 'show' : ''}`}>
           <div className="profile">
           </div>
           <div className="filter-checkboxes">
@@ -474,7 +481,7 @@ function HomePage() {
         </div>
 
         {selectedJob && (
-          <div className="right-div">
+          <div className="right-div animate-job">
 
             <div className="job-description">
               <div className="slct-img">

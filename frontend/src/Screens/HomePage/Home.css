@@ -25,6 +25,9 @@
     margin-left: 20px;
     
   }
+   .left-div.show {
+    transform: translateX(0); /* Slide it into view */
+  }
   
 .profile{
     width: 100%;
@@ -259,6 +262,15 @@ height: 50px;
   text-align: left;
   margin-left: 10px;
 }
+#filter-icon{
+  font-size: 30px;
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+  cursor: pointer;
+}
 
   /* Animation for the job boxes */
   @keyframes slideUp {
@@ -348,8 +360,10 @@ height: 50px;
   }
   
 }
-@media only screen and (min-width:630px){
-
+@media only screen and (max-width:630px){
+#filter-icon{
+  display: block;
+}
 
 }
   @media only screen and (max-width:630px) {
