@@ -360,12 +360,7 @@ height: 50px;
   }
   
 }
-@media only screen and (max-width:630px){
-#filter-icon{
-  display: block;
-}
 
-}
   @media only screen and (max-width:630px) {
     .job-box{
       width:300px ;
@@ -382,7 +377,6 @@ height: 50px;
       justify-content: center;
     }
     .left-div{
-      display: none;
       width: 50%;
     }
    
@@ -393,6 +387,9 @@ height: 50px;
     .job-box{
       width: 350px;
     }
+    #filter-icon{
+      display: block;
+    }
     .jobs{
       width: 100%;
     }
@@ -401,9 +398,22 @@ height: 50px;
       right: 0;
       top: 0;
       background-color: white;
+      margin-bottom: 200px;
     }
     .close-btn{
       left: 30%;
+    }
+    .left-div{
+      display: none;
+    }
+    .left-div.show{
+      width: 85%; 
+      right: 5%;
+      top: 10px;
+      background-color: white;
+      z-index: 2;
+      position: absolute;
+      display: block;
     }
    
     .type{
