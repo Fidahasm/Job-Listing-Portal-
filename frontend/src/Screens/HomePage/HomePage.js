@@ -286,7 +286,7 @@ function HomePage() {
   return (
     <div className="main">
       <div className="header">
-      <i className='bx bx-filter'></i>
+      <i className='bx bx-filter' id='filter-icon'></i>
       <div className="nav-right-bar">
         <div className="search-main-div">
         <div className="job-title">
