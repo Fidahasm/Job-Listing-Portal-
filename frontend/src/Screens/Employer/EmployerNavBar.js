@@ -21,13 +21,13 @@ function EmployerNavBar({ children }) {
   const gotoJobs = () => {
     setActiveSection('jobs');
     navigate('/employer/employer-home');
-    setShowDropdown(false); // Close the dropdown when navigating
+    setShowDropdown(false); 
   };
 
   const gotoCandidates = () => {
     setActiveSection('candidates');
     navigate('/employer/candidates');
-    setShowDropdown(false); // Close the dropdown when navigating
+    setShowDropdown(false); 
   };
 
   const toggleDropdown = () => {
@@ -38,7 +38,7 @@ function EmployerNavBar({ children }) {
     // Handle logout functionality here
     console.log('Logged out');
     setShowDropdown(false);
-    navigate('/'); // Navigate to the home page after logout
+    navigate('/');
   };
 
   return (
@@ -69,7 +69,7 @@ function EmployerNavBar({ children }) {
         <div className="dropdown-menu">
           <div className="dropdown-header">
             <button className="close-dropdown" onClick={() => setShowDropdown(false)}>
-              &times; {/* Close icon, you can replace it with an SVG or Font Awesome icon */}
+              &times; 
             </button>
           </div>
           <p className="user-email">{userEmail}</p>
