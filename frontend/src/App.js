@@ -10,7 +10,6 @@ import EmployerRegistration from "./Screens/Employer/EmployerRegistration";
 import 'boxicons/css/boxicons.min.css';
 import UserProfile from "./Screens/UserProfile/UserProfile";
 import EmployerRoute from "./Screens/Employer/EmployerRoute";
-import Test from "./Screens/HomePage/test";
 import ApplyJob from "./Screens/Employer/ApplyJob";
 
 function App() {
@@ -24,7 +23,6 @@ function App() {
         <Route path="/admin" element = {<Admin/>}/>
         <Route path="/signin" element={<SignIn />}/>
         <Route path="/userprofile" element={<UserProfile />}/>
-        <Route path="/t" element={<Test/>}/>
         <Route path="/employer/*" element={<EmployerRoute />}/>
         <Route path="/apply-job" element={<ApplyJob/>}   />
       </Routes>
