@@ -324,6 +324,7 @@ function HomePage() {
 
 </div>
 <p>User Name</p>
+<p>Web Developer, C++, Python...</p>
 
           </div>
           <div className="filter-checkboxes">
