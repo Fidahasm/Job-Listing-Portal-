@@ -323,8 +323,8 @@ function HomePage() {
     <i className='bx bx-edit'></i>
 
 </div>
-<p>User Name</p>
-<p>Web Developer, C++, Python...</p>
+<p style={{fontSize:"16px",fontWeight:"bold",marginBottom:'0'}}>User Name</p>
+<p  style={{fontSize:"15px",color:"rgb(124, 126, 129)"}}>Web Developer, C++, Python,Flutter,NodeJs</p>
 
           </div>
           <div className="filter-checkboxes">
