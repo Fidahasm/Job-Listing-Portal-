@@ -473,6 +473,8 @@ height: 50px;
     justify-content: space-between;
     padding: 0px 10px;
     /* padding:  0px 5px; */
+    font-family: "Indeed Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", Roboto, Noto, sans-serif;
+
   }
 .search-main-div{
   width: 80%;
@@ -481,9 +483,10 @@ height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .sign-in-btn{
-  width: 60px;
+  width: 70px;
   background-color: rgb(255, 255, 255);
   height: 50px;
   display: flex;
@@ -559,9 +562,7 @@ height: 50px;
   margin-left: 10px;
 
 }
-/* @media only screen and (max-width: 1378){
-  .search-main-div{
-    width: 60%;
-  }
+@media only screen and (max-width: 1607){
+ 
 
-} */
+}
