@@ -38,7 +38,7 @@ function UserProfile() {
         <div className="head-user">
           <div className="head-left-user">
             <div className='left-user'>
-              <h1>Complete Your Profile</h1>
+              <h1>Profile</h1>
             </div>
           </div>
         </div>
