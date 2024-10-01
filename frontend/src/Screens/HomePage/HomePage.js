@@ -298,18 +298,18 @@ function HomePage() {
         <div className="search-main-div">
         <div className="job-title">
         <i className='bx bx-search'></i>
-          <input type="text" />
+          <input type="text"  placeholder='Job Title'/>
           <span style={{ fontSize: '24px', cursor: 'pointer'}}>&times;</span>
         </div>
         <div className="location">
           <img src={locationPin} alt="ERROR" />
-          <input type="text" />
+          <input type="text" placeholder='Location'/>
           <span style={{ fontSize: '24px', cursor: 'pointer'}}>&times;</span>
           </div>
         <div className="find-button">Find Jobs</div>
       </div>
       <div className="sign-in-btn" onClick={gotoLoginPage}>Sign in</div>
-      <div className="employer-login-btn" onClick={gotoEmployerPage}>Employers/Post Job</div>
+      <div className="employer-login-btn" onClick={gotoEmployerPage}>Post Job</div>
       </div>
       </div>
       <div className="job-listing-container">
@@ -394,9 +394,7 @@ function HomePage() {
                         <p> {job.location}</p>
                       </div>
                     </div>
-                    
-                   
-
+                  
                   </div>
                   <div className="type">
                     <div className="small">
