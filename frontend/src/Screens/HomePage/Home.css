@@ -467,28 +467,31 @@ height: 50px;
 }
   }
   .nav-right-bar{
-    width: 60%;
+    width: 950px;
     height: 80px;
-    /* background-color: yellowgreen; */
+    background-color: yellowgreen;
     position: absolute;
     right: 0px;
     top: 0px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     padding: 0px 10px;
     /* padding:  0px 5px; */
     font-family: "Indeed Sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", Roboto, Noto, sans-serif;
+    
 
   }
 .search-main-div{
   width: 80%;
   height: 50px;
-  /* background-color: whitesmoke; */
+  background-color: rgb(193, 38, 38);
   display: flex;
   align-items: center;
-  justify-content: center;
-  
+  justify-content: center; 
+  /* position: absolute;
+  right: 500px;
+   */
 }
 .sign-in-btn{
   width: 70px;
@@ -509,6 +512,7 @@ height: 50px;
   justify-content: center;
   align-items: center;
   margin: 10px;
+  margin-left: 0px;
   cursor: pointer;
   border-radius: 5px;
 
@@ -556,7 +560,7 @@ height: 50px;
 }
 .find-button{
   width: 85px;
-  height: 45px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -567,7 +571,45 @@ height: 50px;
   margin-left: 10px;
 
 }
-@media only screen and (max-width: 1607){
- 
+@media only screen and (max-width: 967px){
+.search-main-div{
+  flex-direction: column;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  width: 80%;
+  height: 140px;
+  position: relative;
+  top: 40px;
+  left: 0px;
+   
+}
+.job-title{
+  width: 60%;
+  height: 80px;
+  margin-bottom: 3px;
+}
+.location{
+  width: 60%;
+  height: 80px;
+  margin-bottom: 3px;
+}
+.search-main-div input {
+width: 350px;
+height: 40px
+}
+.find-button{
+  width: 62%;
+  height: 60px;
+  
+
+  
+}
+.header{
+  height: 150px;
+  
+  
+}
+
 
 }
