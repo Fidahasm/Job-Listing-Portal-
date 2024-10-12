@@ -50,13 +50,16 @@ function JobForm() {
           </div>
           <div className='job-content'>
             <label htmlFor="">Job description</label>
-            <textarea placeholder='Describe the job details and skills required in few lines' required />
+            <textarea placeholder='Describe the job details' required />
           </div>
           {/* <br /> */}
 
           {/* <hr style={{ width: '100%' , height:'0.5px'}} /> */}
         
-
+          <div className='job-content'>
+            <label htmlFor="">Job Requirements</label>
+            <textarea placeholder='Describe the job requirements' required />
+          </div>
           <div className='job-content'>
             <label htmlFor="">Which option best describes this job's location?</label>
             <select name="On-site or Remote" id="" required>
@@ -80,10 +83,7 @@ function JobForm() {
             </div>
 
           </div>
-          <div className='job-content'>
-            <label htmlFor="">Street address</label>
-            <input type="text" required />
-          </div>
+         
           <div className='job-content'>
             <label htmlFor="">Job type</label>
             <select name="type of job" id="" required>

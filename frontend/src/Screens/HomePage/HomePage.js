@@ -331,7 +331,7 @@ function HomePage() {
 
           </div>
           <div className="filter-checkboxes">
-            <h4>Experience Level</h4>
+            <h4>Job Type</h4>
             <label>
               <input type="checkbox" name="internship" onChange={handleExperienceChange} /> Internship
             </label>
@@ -367,7 +367,7 @@ function HomePage() {
             </label>
             <br />
 
-            <h4>Job Type</h4>
+            <h4>Job Mode</h4>
             <label>
               <input type="checkbox" name="OnSite" onChange={handleJobTypeChange} /> On Site
             </label>

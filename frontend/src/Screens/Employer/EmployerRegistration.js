@@ -51,7 +51,7 @@ function EmployerRegistration() {
             </div>
             <div className="button">
             <div className="continue">
-              Continue
+              Submit
               <i className='bx bx-right-arrow-alt' style={{fontSize:"20px"}}></i>
             </div>
             </div>
