@@ -4,7 +4,7 @@ const cors = require('cors')
 const dotenv = require('dotenv')
 const allRoute = require('./routes/all')
 const axios = require('axios')
-
+const apiRoute = require("./routes/all")
 
 dotenv.config()
 
@@ -15,20 +15,10 @@ app.use(express.json())
 
 
 app.post('/signup',async(req,res)=>{
-const {name,email,password} = req.body
-    try{
-        const response = await axios.post('http://localhost:5000/web/api/candidate/signup', {
-            name,
-            email,
-            password,
-        });
-        // console.log(response);
-        
-    }
-    catch(error){
-        console.log(error)
-    }
+    console.log(req.body);
+    
 })
+apiRoute(app);
 
 mongoose.connect(process.env.MONGO_URI)
 
